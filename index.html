@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual da Alexandria | A Nova Luz do Conhecimento</title>
+    <meta name="description" content="Um santuário digital imersivo e provocador, projetado para ser um refúgio para pensadores e mentes curiosas em busca de sabedoria atemporal.">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#1a1a1a] text-[#F5DEB3] font-serif-body overflow-x-hidden">
+
+    <div id="app-container" class="relative">
+
+        <header id="hero" class="relative h-screen flex flex-col items-center justify-center text-center text-white p-4 overflow-hidden">
+            <div id="hero-bg" class="absolute top-0 left-0 w-full h-full bg-cover bg-center" style="background-image: url('https://cloudfront-us-east-1.images.arcpublishing.com/estadao/UDNF4MVAAJOGNJSRF6RYUSG4WQ.jpg');"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-60"></div>
+            
+            <div class="relative z-10 max-w-4xl animate-entry">
+                <h1 class="font-serif-title text-5xl md:text-7xl lg:text-8xl text-shadow-gold" id="main-title">A Nova Luz do Conhecimento</h1>
+                <p class="mt-6 text-lg md:text-xl text-[#FDFDFD] max-w-3xl mx-auto text-shadow-dark" id="welcome-text"></p>
+                
+                <div class="mt-12 w-full max-w-lg mx-auto">
+                    <div class="relative">
+                        <input type="search" placeholder="Busque por obras, autores ou ideias..." class="w-full bg-[#F5DEB3] bg-opacity-20 border border-[#D4AF37] rounded-full py-3 px-6 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] backdrop-blur-sm transition-all duration-300">
+                        <button class="absolute right-4 top-1/2 -translate-y-1/2 text-[#D4AF37]">
+                            <i data-lucide="search" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button id="sound-toggle" class="absolute top-5 right-5 z-20 text-white p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75 transition">
+                <i data-lucide="volume-2" class="w-6 h-6"></i>
+            </button>
+        </header>
+
+        <main class="bg-gradient-to-b from-[#1a1a1a] via-[#3A3B3C] to-[#1a1a1a]">
+
+            <section id="salas-do-saber" class="py-20 px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif-title text-4xl md:text-5xl">As Salas do Saber</h2>
+                    <div class="ornamental-divider"></div>
+                </div>
+                <div id="salas-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                </div>
+            </section>
+
+            <section id="quiz-provocativo" class="py-20 px-4 md:px-8">
+                <div class="parchment-bg max-w-4xl mx-auto p-8 md:p-16 shadow-2xl">
+                    <div id="quiz-content" class="text-[#3A3B3C]">
+                        <div id="quiz-intro">
+                            <h2 class="font-serif-title text-3xl md:text-4xl text-center text-[#8B0000]">O Desafio do Escriba</h2>
+                            <p class="mt-4 text-center italic" id="quiz-intro-text"></p>
+                            <div class="text-center mt-8">
+                                <button id="start-quiz-btn" class="font-serif-title text-lg bg-[#8B0000] text-white py-3 px-8 rounded-lg shadow-lg hover:bg-[#6e0000] transition-transform duration-300 hover:scale-105">Começar o Desafio</button>
+                            </div>
+                        </div>
+                        <div id="quiz-main" class="hidden">
+                            <p id="question-counter" class="text-sm font-bold text-right mb-2"></p>
+                            <p id="quiz-question" class="text-xl md:text-2xl font-medium mb-8"></p>
+                            <div id="quiz-options" class="flex flex-col space-y-4"></div>
+                        </div>
+                        <div id="quiz-result" class="hidden text-center">
+                            <h3 class="font-serif-title text-2xl md:text-3xl text-[#8B0000] mb-4">Reflexão Final</h3>
+                            <p id="quiz-result-text" class="text-lg leading-relaxed"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="landing-ebooks" class="py-20 px-4 md:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif-title text-4xl md:text-5xl">Manuscritos Raros da Arte da Interpretação</h2>
+                     <div class="ornamental-divider"></div>
+                </div>
+                <div id="ebooks-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                </div>
+                
+                <div class="max-w-3xl mx-auto mt-20 p-8 border-2 border-[#D4AF37] rounded-lg bg-[#3A3B3C] bg-opacity-30">
+                    <h3 class="font-serif-title text-2xl text-center mb-2">Acesso ao Acervo dos Sábios</h3>
+                    <p class="text-center mb-6">Inscreva-se para receber atualizações sobre novas aquisições, ensaios exclusivos e acesso antecipado aos nossos manuscritos raros.</p>
+                    <form id="ebook-form" class="flex flex-col md:flex-row gap-4 justify-center">
+                        <input type="email" name="email" id="email-input" required placeholder="Seu e-mail de estudioso" class="flex-grow bg-transparent border border-[#D4AF37] rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+                        <button type="submit" class="font-serif-title bg-[#D4AF37] text-[#3A3B3C] py-2 px-6 rounded-md hover:bg-[#b8942d] transition-transform duration-300 hover:scale-105">Inscrever-se</button>
+                    </form>
+                    <p id="form-feedback" class="text-center mt-4 h-5"></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-black py-12 px-4 md:px-8 text-center border-t-2 border-[#D4AF37]">
+            <div class="max-w-5xl mx-auto">
+                <p class="font-serif-title text-xl text-[#D4AF37] mb-4" id="mission-statement"></p>
+                
+                <div class="my-8">
+                    <p class="italic text-lg text-gray-300" id="quote-text"></p>
+                    <p class="mt-2 text-sm text-gray-400" id="quote-author"></p>
+                </div>
+
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition-colors"><i data-lucide="instagram" class="w-7 h-7"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition-colors"><i data-lucide="twitter" class="w-7 h-7"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-[#D4AF37] transition-colors"><i data-lucide="youtube" class="w-7 h-7"></i></a>
+                </div>
+                 <p class="text-xs text-gray-600 mt-10">&copy; 2025 Biblioteca Virtual da Alexandria. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>

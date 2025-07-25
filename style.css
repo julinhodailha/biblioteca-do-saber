@@ -1,0 +1,138 @@
+:root {
+    --gold: #D4AF37;
+    --deep-red: #8B0000;
+    --royal-blue: #002366;
+    --marble-white: #FDFDFD;
+    --parchment: #F5DEB3;
+    --shadow-burned: #3A3B3C;
+    --dark-bg: #1a1a1a;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif-title {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.font-serif-body {
+    font-family: 'Lora', serif;
+}
+
+.text-shadow-gold {
+    text-shadow: 0px 2px 4px rgba(212, 175, 55, 0.5), 0px 0px 10px rgba(212, 175, 55, 0.3);
+}
+
+.text-shadow-dark {
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.animate-entry {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ornamental-divider {
+    width: 100px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1rem auto;
+    position: relative;
+}
+
+.ornamental-divider::before,
+.ornamental-divider::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--gold);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.ornamental-divider::before {
+    left: -15px;
+}
+
+.ornamental-divider::after {
+    right: -15px;
+}
+
+.parchment-bg {
+    background-color: var(--parchment);
+    background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAoACgDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAAAAcDBgEEBQr/xAAuEAABAwIBDAkFAAAAAAAAAAABAAIDBAUGEQcSITFBUWFxgaGxstEUMkJSYoL/xAAZAQACAwEAAAAAAAAAAAAAAAADBAABAgX/xAAdEQACAgMAAwEAAAAAAAAAAAAAAQIRAyESMUEE/9oADAMBAAIRAxEAPwC0Xfju3Wi5zW+ooKp8kLtLiwtweQ6rQfjJYv0G4+5v7qkX/eLreLzPW0F3uNLTvLdsEU7gwYAGAD0AXK/G97/q11/5T/qrkYxZ6EcUqSN2i48sUsjWPoa1jScbnBuB4las/G2w/oNx9zVVLdebk+N7HXW4tcCCDO7IPquJt8iOqRkcZ9lvsW2uP7NW1sVNFQ1bXvOAXMLQO6uT+8p+G1H2t/hZRYrjeKW80tVR3e5RSxvBDmzvPTyV9fiVcv1i1/a5Zp+kTl/ZJ395T8NqPtb/Cj+8p+G1H2t/hUn8Srl+sWv7XKPEq5frFr+1yoyn2X/iJ395T8NqPtb/Cj+8p+G1H2t/hUn8Srl+sWv7XIn4kXL9Ytf2uTKfYP4id/eU/Daj7W/wo/vKfhtR9rf4VJ/Eq5frFr+1yPEq5frFr+1yZT7B/ETsDjGzXG5Q0FNRVbZZjtNLywNAwCel1P+Kk3w1T3N/hZpYrzebfeKWtp7xcY5YnhzSJ3np5LWPxqun6tdf+Q/6rVGLRlPFGkaV+Kk3w1T3N/hH4qTfDVPc3/lZ1+NV0/Vrr/wAh/wBR+NV0/Vrr/wAh/wBVfKjPlFofipt8NU9zf+UfiqN8NU9zf8AlZ7+NV1/Vrr/AMh/1H41XX9Wuv8AyH/UcoDlFoi/FUb4ap7m/wDKq4vW6C70hq6Vj2sDi3Dxg5CpX41XX9Wuv/If9VuHCy51twsb5q+qlnlE7m7b3FxAw3AyeylJJ7GckktHfVVUFLTvnqZWRRMGXPe4AAd1R73xmsFmpjLUVzZ5MYZBTkPe4+HRURxJ4gV9zu9Rb6CrkhpKZ5jLYnFrpXA4JJHUDoFSbxcKueRz6ipmlcebnuJPms4wvuROdei/4uM9/q3ugt9OykjP+aY7bkeQ5D1VGu+I7/cM/jLtUEHmMdtD3ALM6mYk5JKiOec4C0xikrRmlOT6OvqZZZnbc0jnuP+RJPitbZZJHbrnOPUrlHAnPJRwCc+K1ZFzqSSclSiTk81rAJySVrBLickkq2LHE5JUsckla+Tk5JKlYTySSrYsf//Z');
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    position: relative;
+    border: 2px solid #c8aE77;
+}
+
+.sala-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sala-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.2);
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border: 2px solid #8B0000;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.quiz-option:hover {
+    background-color: rgba(139, 0, 0, 0.2);
+    transform: translateX(5px);
+}
+
+.quiz-option.selected {
+    background-color: #8B0000;
+    color: white;
+    border-color: #6e0000;
+}
+
+.ebook-card {
+    border: 2px solid var(--gold);
+    background: rgba(58, 59, 60, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.ebook-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+.ebook-cover {
+    width: 100%;
+    height: 250px;
+    background-color: var(--shadow-burned);
+    border-bottom: 2px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--gold);
+}
